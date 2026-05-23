@@ -14,7 +14,7 @@
     <div class="container">
       <div class="breadcrumb"><a href="index.html">← Accueil</a></div>
       <h1>Résultats estimés</h1>
-      <p class="subtitle">Synthèse de vos auto-évaluations — BANQUE PT 2026</p>
+      <p class="subtitle">Synthèse des auto-évaluations — BANQUE PT 2026</p>
     </div>
   </header>
 
@@ -33,7 +33,7 @@
         <tr>
           <th>Épreuve</th>
           <th>Note centrale</th>
-          <th>Intervalle [pessimiste – optimiste]</th>
+          <th>Intervalle</th>
           <th>Auto-éval.</th>
           <th></th>
         </tr>
@@ -41,16 +41,16 @@
       <tbody id="resultsTableBody"></tbody>
     </table>
 
-    <div class="disclaimer">
-      ⚠ Ces estimations sont fournies à titre indicatif avec une marge de sécurité intégrée (λ&nbsp;=&nbsp;0,4&thinsp;σ).
-      Elles reposent sur les distributions de notes rehaussées fournies et sur une auto-évaluation subjective.
-      La note réelle dépend du barème officiel et de la correction des examinateurs.
+    <div class="disclaimer" style="margin-top:16px">
+      ⚠ Estimations indicatives avec marge de sécurité intégrée (λ = 0,4 σ).
+      Reposent sur les distributions rehaussées et une auto-évaluation subjective.
     </div>
 
   </main>
 
-  <script src="js/data.js"></script>
+  <script src="js/data/catalogue.js"></script>
   <script src="js/model.js"></script>
+  <script src="js/storage.js"></script>
   <script src="js/resultats.js"></script>
 </body>
 </html>

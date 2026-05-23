@@ -25,29 +25,24 @@
   <main class="container">
     <div class="epreuve-layout">
 
-      <!-- ── Gauche : questions & corrigés ── -->
       <div>
         <div class="progress-container">
           <div class="progress-label">
-            <span>Progression de l'évaluation</span>
+            <span>Progression</span>
             <span id="progressLabel">0 / 0 parties évaluées</span>
           </div>
           <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
           </div>
         </div>
-
         <div id="partiesContainer"></div>
       </div>
 
-      <!-- ── Droite : estimateur (sticky) ── -->
       <div>
         <div class="grade-estimator">
           <div class="estimator-title">Note estimée</div>
           <div id="estimatorContent">
-            <p class="estimator-waiting">
-              Évalue les parties pour voir ta note estimée.
-            </p>
+            <p class="estimator-waiting">Évalue les parties pour voir ta note estimée.</p>
           </div>
         </div>
       </div>
@@ -55,14 +50,14 @@
     </div>
   </main>
 
-  <!-- KaTeX -->
+  <!-- KaTeX (rendu des formules mathématiques) -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-          crossorigin="anonymous"
-          onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false})"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 
-  <script src="js/data.js"></script>
+  <!-- catalogue chargé en premier, epreuve.js charge dynamiquement le fichier de corrigé -->
+  <script src="js/data/catalogue.js"></script>
   <script src="js/model.js"></script>
+  <script src="js/storage.js"></script>
   <script src="js/epreuve.js"></script>
 </body>
 </html>
