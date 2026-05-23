@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Épreuve — BANQUE PT 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">← Accueil</a></div>
+      <h1 id="epNom">…</h1>
+      <div class="epreuve-stats" id="epStats">
+        <span class="stat-item">Année : <span id="epAnnee"></span></span>
+        <span class="stat-item">Durée : <span id="epDuree"></span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="epreuve-layout">
+
+      <!-- ── Gauche : questions & corrigés ── -->
+      <div>
+        <div class="progress-container">
+          <div class="progress-label">
+            <span>Progression de l'évaluation</span>
+            <span id="progressLabel">0 / 0 parties évaluées</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div id="partiesContainer"></div>
+      </div>
+
+      <!-- ── Droite : estimateur (sticky) ── -->
+      <div>
+        <div class="grade-estimator">
+          <div class="estimator-title">Note estimée</div>
+          <div id="estimatorContent">
+            <p class="estimator-waiting">
+              Évalue les parties pour voir ta note estimée.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- KaTeX -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false})"></script>
+
+  <script src="js/data.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/epreuve.js"></script>
+</body>
+</html>
