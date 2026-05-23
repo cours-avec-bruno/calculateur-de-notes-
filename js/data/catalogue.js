@@ -6,13 +6,13 @@
 const CATALOGUE = [
   {
     id: 'maths1',
-    nom: 'Mathématiques 1',
-    code: 'M1',
-    annee: 2025,
+    nom: 'Mathématiques A',
+    code: 'MA',
+    annee: 2026,
     duree: '4h',
-    hasCorrige: false,
-    mu: null,
-    sigma: null,
+    hasCorrige: true,
+    mu: 8.41,
+    sigma: 4.21,
     parties: []
   },
   {
