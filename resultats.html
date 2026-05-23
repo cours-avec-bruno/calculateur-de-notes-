@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résultats — BANQUE PT 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">← Accueil</a></div>
+      <h1>Résultats estimés</h1>
+      <p class="subtitle">Synthèse de vos auto-évaluations — BANQUE PT 2026</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom:60px">
+
+    <div id="noResults" class="info-banner" style="display:none">
+      <span>ℹ</span>
+      <p>
+        Aucune épreuve évaluée pour le moment.
+        <a href="index.html" style="color:inherit;font-weight:600">Retournez à l'accueil</a> pour commencer.
+      </p>
+    </div>
+
+    <table class="results-table" id="resultsTable">
+      <thead>
+        <tr>
+          <th>Épreuve</th>
+          <th>Note centrale</th>
+          <th>Intervalle [pessimiste – optimiste]</th>
+          <th>Auto-éval.</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="resultsTableBody"></tbody>
+    </table>
+
+    <div class="disclaimer">
+      ⚠ Ces estimations sont fournies à titre indicatif avec une marge de sécurité intégrée (λ&nbsp;=&nbsp;0,4&thinsp;σ).
+      Elles reposent sur les distributions de notes rehaussées fournies et sur une auto-évaluation subjective.
+      La note réelle dépend du barème officiel et de la correction des examinateurs.
+    </div>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/resultats.js"></script>
+</body>
+</html>
